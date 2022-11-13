@@ -1,0 +1,304 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+\usepackage{standalone}
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{black} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage[scale=0.85]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%\usepackage[utf8]{inputenc}
+
+%\usepackage{booktabs}
+\usepackage{fontawesome}
+\usepackage{marvosym} % For cool symbols.
+%\usepackage{hyperref}
+
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Ian } % Your first name
+\familyname{Sotnek} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Curriculum Vitae}
+%\address{Department of CSE}{Indian Institute of Technology xyz}
+\mobile{+1 (978) 914-4247}
+
+
+%\fax{(000) 111 1113}
+ 
+%\social{github}{isotnek}
+\email{ian.sotnek@gmail.com} 
+
+
+
+%\homepage{www.xyz.com/}{My Webpage}
+
+% social link \faGithub, \faSkype, \faLinkedin,\faStackExchange, and \faStackOverflow
+\extrainfo{
+    \faGithub\href{https://github.com/isotnek}{ Github} \quad
+    \faLinkedin\href{https://www.linkedin.com/in/ian-sotnek/}{ Linkedin} \quad
+%    \faSkype\href{https://skype.com/abc}{Skype}
+    }
+
+
+
+%\social[linkedin][www.linkedin.com]{name}
+% The first argument is %the url for the clickable link, the second argument is the url displayed in the %template - this allows special characters to be displayed such as the tilde in this %example
+
+%\photo[70pt][0.3pt]{picture} % The first bracket is the picture height, the second is %the thickness of the frame around the picture (0pt for no frame)
+%\quote{Not Attention, Patience is all we need.}
+
+%----------------------------------------------------------------------------------------
+
+\newcommand{\cvdoublecolumn}[2]{%
+  \cvitem[.75em]{}{%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemcolumnwidth}#2\end{minipage}%
+    }%
+}
+
+
+
+\usepackage{multibbl}
+\newcommand\Colorhref[3][orange]{\href{#2}{\small\color{#1}#3}}
+
+
+% \newcommand{\cvreference}[7]{%
+%     \textbf{#1}\newline% Name
+%     \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+%     \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+%     \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+%     \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+%     \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{#6}\newline}%
+%     \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7}}
+
+\begin{document}
+
+\makecvtitle % Print the CV title
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\cventry{2019--2020}{Master of International Policy \& Practice}{Elliott School of International Relations, George Washington University}{Washington, D.C.}{Advisor: Matthew Levinger}
+{Concentration in Artificial Intelligence Policy \& Governance. \textbf{GPA: 3.59 / 4}}  % Arguments not required can be left empty
+
+\cventry{2017--2019}{Doctor of Philosophy (Dropout)}{University of Delaware}{Newark, DE}{Advisor: Dr. John Jeka}{Voluntarily withdrew  after passing qualifying exam. \textbf{GPA: 3.73 / 4}}
+
+\cventry{2016--2017 :}{Master of Science, Exercise \& Sport Science}{Merrimack College}{North Andover, MA}{}{\textbf{GPA: 3.89 / 4}}
+
+\cventry{2012--2016 :}{Bachelor of Science, Exercise Science}{University of Connecticut}{Storrs, CT)}{}{\textbf{GPA: 3.43 / 4}}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+%----------------------------------------------------------------------------------------
+
+
+\section{Publications}
+% \subsection{Journal Article(Accepted)}
+
+\subsection{Journal Articles}
+\newbibliography{journal}
+\bibliographystyle{journal}{plainyrrev}
+\nocite{journal}{*}
+\bibliography{journal}{journal}
+{\large \textsc{Refereed Journal Articles}}
+%\subsection{Communicated Journal Article}
+
+
+\subsection{In Conference Proceedings}
+\newbibliography{conference}
+\nocite{conference}{*}
+\bibliographystyle{conference}{plainyrrev}
+\bibliography{conference}{conference}
+{\large \textsc{Refereed Conference Publications}}
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Research Experience}
+
+\cventry{2020 -- Present}{\textit{The Multiple Subnetwork Hypothesis}}{}{}{}{Contributing to the experimental evaluation of a novel technique for developing sparse \& multitask/multidomain artificial neural networks (ANNs). Created custom Keras and PyTorch layers to allow developers to utilize this technique as part of the BeyondML open-source project. Explored the implications of this approach for improving ANNs' robustness to adversarial inputs.}
+\cvitem{Advisor :}{\textbf{Dr. Jacob Renn}, \textit{CTO, AI Squared}}
+
+\cventry{2017 -- 2019}{\textit{Balance Control During Walking in Children with Cerebral Palsy}}{}{}{}{Investigated the degree to which proprioceptive deficits in children with cerebral palsy (CP) affect control of balance during locomotion. Utilized motion capture, ground reaction forces, and electromyography to study the activation of balance control mechanisms in children with CP in response to sensory perturbation (glavanic vestibular stimulation \& visual scene rotation) while subjects walked within a custom-built virtual reality environment on an instrumented treadmill.}
+\cvitem{Advisor :}{\textbf{Dr. John Jeka}, \textit{Professor, College of Health Sciences}, University of Delaware}
+
+\cventry{2017 -- 2018}{\textit{Activation of Compensatory Balance Mechanisms while Walking on Compliant Surfaces}}{}{}{}{Examined the degree to which walking across a compliant surface downweights proprioceptive inputs. Utilized galvanic vestibular stimulation, motion capture, ground reaction forces, and electromyography to study the activation of balance control mechanisms in healthy subjects while they walked on a compliant surface.}
+\cvitem{Advisor :}{\textbf{Dr. John Jeka}, \textit{Professor, College of Health Sciences}, University of Delaware}
+
+\cventry{2016 -- 2017}{\textit{Improving Physical and Cognitive Performance of Older Adults with Physical Activity}}{}{}{}{Designed and implemented physical activity programme for mobility-limited older adults to establish the dose-response relationship between physical activity frequency, duration, and intensity and measures of physical fitness and cognitive acuity.}
+\cvitem{Advisor :}{\textbf{Dr. Michael Corcoran}, \textit{Associate Professor, School of Nursing \& Health Sciences}, Merrimack College}
+
+%\cvitem{Advisor :}{\textbf{Dr. abc xyz}, \textit{Associate Professor, Department of Computer Science \& Engineering}, %IIT abc ({\Colorhref{https://www.personal_webpage.com/} {\textit{Personal Web-page}}})}
+
+
+%----------------------------------------------------------------------------------------
+%	Fellowships \& Awards
+%----------------------------------------------------------------------------------------
+
+\section{Fellowships \& Awards}
+
+\cvitem{2008}{\textit{\textbf{Summer Doctoral Award}} of \$3,300 USD from the University of Delaware to fund proposal: \textit{Balance Control Deficits During Walking in Children with Cerebral Palsy}.}
+
+
+
+%----------------------------------------------------------------------------------------
+%	Academic achievements
+%----------------------------------------------------------------------------------------
+
+%\section{Academic Achievements \& Recognitions }
+
+
+%\cvitem{2018}{\textbf{Session Chair of the session "Prediction"} in \textbf{$25^{th}$ \textit{International Conference of Neural Information Processing} (ICONIP 2018)}, Siem Reap, Cambodia.}
+
+
+%\cvitem{2018}{Invited to conduct lab sessions in \textit{\textbf{"Training Program on Machine Learning For Ocean Acoustics and Climate Data Analysis"}}, during 22-36 October 2018 at \textbf{Defence R\&D Organization- Naval Physical \& Oceanographic Laboratory (DRDO-NPOL), Kochi, Kerala}.}
+
+
+%----------------------------------------------------------------------------------------
+%	Teaching EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Teaching Experience}
+
+\cventry{Spring, 2019}{KAAP 428: Motor Control \& Learning}{}{University of Delaware}{}{Student Evaluation: 4.71 / 5}
+\cventry{Fall, 2018}{KAAP 428: Motor Control \& Learning}{}{University of Delaware}{}{Student Evaluation: 4.71 / 5}
+\cventry{Spring, 2018}{KAAP 428: Motor Control \& Learning}{}{University of Delaware}{}{Student Evaluation: 4.44 / 5}
+\cventry{Fall, 2017}{KAAP 428: Motor Control \& Learning}{}{University of Delaware}{}{Student Evaluation: 4.09 / 5}
+\cventry{Spring, 2017}{HSC 2300: Introduction to Nutritional Science}{}{Merrimack College}{}{}
+\cventry{Fall, 2016}{HSC 2300: Introduction to Nutritional Science}{}{Merrimack College}{}{}
+\cventry{Fall, 2016}{HSC 1122: Anatomy \& Physiology I}{}{Merrimack College}{}{}
+%----------------------------------------------------------------------------------------
+%   RELEVANT EMPLOYMENT SECTION
+%----------------------------------------------------------------------------------------
+\section{Employment History}
+
+\cventry{2020--Present}{AI Squared, inc.}{Co-Founder \& Director of Product}{}{}{Co-Founded a startup backed by blue-chip venture capitalists. Designed \& oversaw the creation of a flexible, extensible product to make AI more accessible to knowledge workers in large organizations. Communicated about the product to technical \& non-technical audiences in podcasts, written articles, and live presentations at industry conferences.}
+
+\cventry{2021}{Maxar Technologies}{Data Science Intern}{}{}{Applied computer vision and advanced mapping techniques to COVID-19 risk modelling.}
+
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\cvitem{Programming Languages}{Python (Pandas, NumPy, TensorFlow, PyTorch, etc.), LabVIEW, MATLAB}
+\cvitem{Technologies}{Linux, \LaTeX, Microsoft Office, Git}
+%\cvitem{Database}{SQL, MySQL, Apache, Neo4j}
+
+
+%----------------------------------------------------------------------------------------
+%	Position of Responsibility SECTION
+%----------------------------------------------------------------------------------------
+
+%\section{Position of Responsibility}
+%\cventry{2016-2020}{Executive member of IEEE Student Branch}{}{IIT ABC}{}{}
+%\cventry{April 1-5, 2019}{Organizer, GIAN Workshop on subjects}{}{IIT ABC}{}{}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	Relevant COURSEWORK SECTION
+%----------------------------------------------------------------------------------------
+%\section{Coursework}
+
+%\cventry{TEST}{test}{TEST}{test1}{TEST1}{test2}
+%\cventry{George Washington University}{}{}{}{}{}
+%\cventry{University of Delaware}{}{Introduction to Programming in MATLAB, Biological Data Analysis, EMG Theory \& Practice, Introduction to Laboratory Instrumentation}{}{}{}
+%\cventry{Merrimack College}{}{}{}{}{}
+%\cventry{University of Connecticut}{}{}{}{}{}
+
+
+%----------------------------------------------------------------------------------------
+    %	Relevant CERTIFICATES SECTION
+%----------------------------------------------------------------------------------------
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	REFEREES SECTION
+%----------------------------------------------------------------------------------------
+%\section{Referees}
+
+
+%\begin{tabular}{lr}
+% Referee 1
+%\begin{minipage}[t]{3in}
+%\textbf{Dr. XXXXX XXXXX}\\
+%\textit{Associate Professor, Department of} \\
+%\textit{Computer Science \& Engineering}\\
+%Institute name\\
+%\Letter\ \href{mailto:abc@gmail.com}{abc@gmail.com}
+%\end{minipage}
+%&
+% Referee 2
+%\begin{minipage}[t]{3in}
+%\textbf{Dr. XXXXX XXXXX}\\
+%\textit{Associate Professor, Department of} \\
+%\textit{Computer Science \& Engineering}\\
+%Institute name\\
+%\Telefon\ +(601) 877-6236\\
+%\Letter\ \href{mailto:abc@gmail.com}{abc@gmail.com}
+%\end{minipage}
+%\\
+%\\ % Additional newline for spacing.
+% Referee 3
+%\begin{minipage}[t]{3in}
+%\textbf{Dr. XXXXX XXXXX}\\
+%\textit{Associate Professor, Department of} \\
+%\textit{Computer Science \& Engineering}\\
+%Institute name\\
+%\Telefon\ +(601) 877-6236\\
+%\Letter\ \href{mailto:abc@gmail.com}{abc@gmail.com}
+%\end{minipage}
+%&
+%\\
+%\end{tabular}
+
+
+\end{document}
